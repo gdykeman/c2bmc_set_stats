@@ -7,4 +7,3 @@
       set_stats:
         data:
           created_fact: "I am from the first playbook"
-        per_host: yes
