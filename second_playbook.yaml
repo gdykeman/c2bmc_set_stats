@@ -5,4 +5,4 @@
   tasks:
     - name: display generated fact
       debug:
-        msg: "{{ created_facts }}"
+        msg: "{{ created_fact }}"
