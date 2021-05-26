@@ -9,10 +9,11 @@
         include: yes
         count: 1
         instance_type: "t2.medium"
-  
+
   # Yes to RHEL or no
   # RHEL COUNT <integer>
 
   tasks:
     - debug:
-        msg: "OS is {{ support_os[tower_os] }} and count is {{support_os[tower_os][tower_count] }}"
+        msg: "{{ tower_os_rhel }} and {{tower_rhel_count }}"
+
