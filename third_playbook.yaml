@@ -17,3 +17,11 @@
     - debug:
         msg: "{{ tower_os_rhel }} and {{tower_rhel_count }}"
 
+    - set_fact:
+        support_os: "{{ support_os|combine({tower_os_rhel: {'count': tower_rhel_count}}, recursive=True) }}"
+    - set_fact:
+        support_os: "{{ support_os|combine({tower_os_rhel: {'instance_type': tower_instance_type}}, recursive=True) }}"
+
+
+    - debug:
+        var: support_os
